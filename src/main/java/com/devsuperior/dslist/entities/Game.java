@@ -26,10 +26,14 @@ public class Game {
 	@Column(name = "game_year")  // CUSTOMIZA a palavra RESERVADA
 	private Integer year;    //**year é uma palavra reservada em banco de dados
 	private String genre;
-	private String plataforms;
+	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	
@@ -37,14 +41,14 @@ public class Game {
 	}
 
 
-	public Game(Long id, String title, Integer year, String genre, String plataforms, Double score, String imgUrl,
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 	
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.plataforms = plataforms;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -92,13 +96,13 @@ public class Game {
 	}
 
 
-	public String getPlataforms() {
-		return plataforms;
+	public String getPlatforms() {
+		return platforms;
 	}
 
 
-	public void setPlataforms(String plataforms) {
-		this.plataforms = plataforms;
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
 	}
 
 
